@@ -10,9 +10,11 @@ const Index = () => {
 
     const [currentAccount,setCurrentAccount] = useState();
     const hanleLogInClick = async () =>{
-      if (window) {
-      const {ethereum} = window;
+
+      if(window){
+        const {ethereum} = window;
       }
+   
       try {
    
         const accounts = await ethereum.request({method: "eth_requestAccounts"});
